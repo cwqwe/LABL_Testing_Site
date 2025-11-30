@@ -1,40 +1,40 @@
 /* =================================================== */
-/* === BASE COLOR VARIABLES (Default: Brown/Tan) === */
+/* === BASE COLOR VARIABLES (Default: Dark Mode) === */
 /* =================================================== */
 :root {
-    /* Color Palette */
-    --bg-color: #2e2621;
-    --container-bg: rgba(77, 60, 46, 0.9);
-    --header-bg: #4d3c2e;
-    --text-color: #e8e4e1;
-    --secondary-text-color: #a89a8c; /* Used for Particle color/lines */
-    --button-color: #d4a076;
-    --button-hover: #c98e60;
-    --tab-color: #6b5a4a;
-    --tab-hover: #5d4e41;
-    --border-color: rgba(255, 255, 255, 0.1);
-    --shadow-color: rgba(0, 0, 0, 0.4);
-    --ab-button-color: #a89a8c;
-    --ab-button-hover: #e8e4e1;
+    /* Color Palette - Defaulting to Dark Mode */
+    --bg-color: #121212;
+    --container-bg: rgba(30, 30, 30, 0.95);
+    --header-bg: #212121;
+    --text-color: #e0e0e0;
+    --secondary-text-color: #a0a0a0; /* Used for Particle color/lines */
+    --button-color: #BB86FC; 
+    --button-hover: #3700B3;
+    --tab-color: #424242;
+    --tab-hover: #505050;
+    --border-color: rgba(255, 255, 255, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.8);
+    --ab-button-color: #BB86FC;
+    --ab-button-hover: #ffffff;
 
     /* LABL Colors (integrated into main palette) */
-    --cat-dark-brown: #5d4e41;
-    --cat-medium-brown: #7b6a5a;
-    --cat-light-tan: #9c9184;
-    --cat-creamy-white: #e8e4e1;
-    --cat-warm-highlight: #d4a076;
+    --cat-dark-brown: #212121;
+    --cat-medium-brown: #424242;
+    --cat-light-tan: #a0a0a0;
+    --cat-creamy-white: #e0e0e0;
+    --cat-warm-highlight: #BB86FC;
 
-    --labl-container-bg: rgba(61, 49, 39, 0.85);
+    --labl-container-bg: rgba(24, 24, 24, 0.9);
     --labl-input-bg: rgba(255, 255, 255, 0.1);
-    --labl-input-border: rgba(255, 255, 255, 0.2);
-    --labl-input-focus: var(--cat-warm-highlight);
-    --labl-button-primary-bg: var(--cat-warm-highlight);
-    --labl-button-primary-hover: #c98e60;
-    --labl-button-secondary-bg: var(--cat-medium-brown);
-    --labl-button-secondary-hover: #6a5a4b;
-    --labl-button-text-color: var(--cat-creamy-white);
-    --labl-button-shadow: rgba(0, 0, 0, 0.4);
-    --labl-border-light: rgba(255, 255, 255, 0.2);
+    --labl-input-border: rgba(255, 255, 255, 0.3);
+    --labl-input-focus: #BB86FC;
+    --labl-button-primary-bg: #BB86FC;
+    --labl-button-primary-hover: #9c5cff;
+    --labl-button-secondary-bg: #424242;
+    --labl-button-secondary-hover: #505050;
+    --labl-button-text-color: #000000;
+    --labl-button-shadow: rgba(0, 0, 0, 0.5);
+    --labl-border-light: rgba(255, 255, 255, 0.3);
 }
 
 body {
@@ -50,8 +50,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* 🌟 FIX: Use !important to force this CSS variable to define the background color */
-    background-color: var(--bg-color) !important;
+    /* This uses the dark mode default */
+    background-color: var(--bg-color) !important; 
     z-index: -1;
 }
 
@@ -332,7 +332,7 @@ body {
 .ab-cloak-page input[type="text"]:focus {
     outline: none;
     border-color: var(--labl-input-focus);
-    box-shadow: 0 0 0 3px rgba(212, 160, 118, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .ab-cloak-page #launchButton {
     padding: 16px 35px;
@@ -457,7 +457,7 @@ body {
 .theme-page select:focus {
     outline: none;
     border-color: var(--button-color);
-    box-shadow: 0 0 0 3px rgba(212, 160, 118, 0.3);
+    box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.3);
 }
 
 .theme-page #saveThemeButton {
@@ -487,46 +487,6 @@ body {
 /* =================================================== */
 /* === THEME VARIABLE OVERRIDES (Apply new palette) === */
 /* =================================================== */
-
-/* --- Dark Mode (.theme-dark) --- */
-.chat-container.theme-dark {
-    --bg-color: #121212;
-    --container-bg: rgba(30, 30, 30, 0.95);
-    --header-bg: #212121;
-    --text-color: #e0e0e0;
-    --secondary-text-color: #a0a0a0;
-    --button-color: #BB86FC; 
-    --button-hover: #3700B3;
-    --tab-color: #424242;
-    --tab-hover: #505050;
-    --border-color: rgba(255, 255, 255, 0.15);
-    --shadow-color: rgba(0, 0, 0, 0.8);
-    --ab-button-color: #BB86FC;
-    --ab-button-hover: #ffffff;
-
-    /* LABL Panel Overrides */
-    --cat-creamy-white: #e0e0e0;
-    --cat-light-tan: #a0a0a0;
-    --labl-container-bg: rgba(24, 24, 24, 0.9);
-    --labl-input-bg: rgba(255, 255, 255, 0.1);
-    --labl-input-border: rgba(255, 255, 255, 0.3);
-    --labl-input-focus: #BB86FC;
-    --labl-button-primary-bg: #BB86FC;
-    --labl-button-primary-hover: #9c5cff;
-    --labl-button-secondary-bg: #424242;
-    --labl-button-secondary-hover: #505050;
-    --labl-button-text-color: #000000;
-    --labl-button-shadow: rgba(0, 0, 0, 0.5);
-    --labl-border-light: rgba(255, 255, 255, 0.3);
-}
-
-.chat-container.theme-dark .reset-button:hover {
-        color: #BB86FC;
-}
-.chat-container.theme-dark .close-button:hover {
-        background: #cf6679;
-}
-
 
 /* --- Deep Blue Theme (.theme-blue) --- */
 .chat-container.theme-blue {
@@ -588,4 +548,74 @@ body {
     --labl-button-secondary-hover: #4d7a4d;
     --labl-button-text-color: #ffffff;
     --labl-border-light: rgba(255, 255, 255, 0.2);
+}
+
+/* --- NEW: Crimson Red Theme (.theme-red) --- */
+.chat-container.theme-red {
+    --bg-color: #4d0000;
+    --container-bg: rgba(77, 26, 26, 0.9);
+    --header-bg: #660000;
+    --text-color: #ffe6e6;
+    --secondary-text-color: #ffb3b3; /* Light red for particles */
+    --button-color: #e60000;
+    --button-hover: #cc0000;
+    --tab-color: #330000;
+    --tab-hover: #4d0000;
+    --border-color: rgba(255, 255, 255, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.7);
+    --ab-button-color: #e60000;
+    --ab-button-hover: #ffcccc;
+
+    /* LABL Panel Overrides */
+    --cat-creamy-white: #ffe6e6;
+    --cat-light-tan: #ffb3b3;
+    --labl-container-bg: rgba(66, 20, 20, 0.85);
+    --labl-input-bg: rgba(255, 255, 255, 0.1);
+    --labl-input-border: rgba(255, 255, 255, 0.2);
+    --labl-input-focus: #ffb3b3;
+    --labl-button-primary-bg: #e60000;
+    --labl-button-primary-hover: #cc0000;
+    --labl-button-secondary-bg: #330000;
+    --labl-button-secondary-hover: #4d0000;
+    --labl-button-text-color: #ffffff;
+    --labl-border-light: rgba(255, 255, 255, 0.2);
+}
+
+/* --- NEW: Vibrant Yellow Theme (.theme-yellow) --- */
+.chat-container.theme-yellow {
+    --bg-color: #4a4200;
+    --container-bg: rgba(74, 66, 0, 0.9);
+    --header-bg: #807300;
+    --text-color: #ffffcc;
+    --secondary-text-color: #ffeb80; /* Light yellow for particles */
+    --button-color: #ffbf00;
+    --button-hover: #e6ac00;
+    --tab-color: #5c5200;
+    --tab-hover: #736700;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --ab-button-color: #ffbf00;
+    --ab-button-hover: #ffffff;
+
+    /* LABL Panel Overrides */
+    --cat-creamy-white: #ffffcc;
+    --cat-light-tan: #ffeb80;
+    --labl-container-bg: rgba(60, 53, 0, 0.85);
+    --labl-input-bg: rgba(255, 255, 255, 0.1);
+    --labl-input-border: rgba(255, 255, 255, 0.3);
+    --labl-input-focus: #ffeb80;
+    --labl-button-primary-bg: #ffbf00;
+    --labl-button-primary-hover: #e6ac00;
+    --labl-button-secondary-bg: #5c5200;
+    --labl-button-secondary-hover: #736700;
+    --labl-button-text-color: #111111;
+    --labl-border-light: rgba(255, 255, 255, 0.3);
+}
+
+/* Reset button hover for default dark mode */
+.chat-container .reset-button:hover {
+        color: #BB86FC;
+}
+.chat-container .close-button:hover {
+        background: #cf6679;
 }

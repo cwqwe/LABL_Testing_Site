@@ -3,11 +3,11 @@ function initializeParticles() {
     particlesJS('particle-canvas', {
         "particles": {
             "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
-            "color": { "value": "#a89a8c" }, 
+            "color": { "value": "#a0a0a0" }, /* 🌟 New Default Particle Color (Dark Mode) */
             "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000000" } },
             "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } },
             "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } },
-            "line_linked": { "enable": true, "distance": 150, "color": "#a89a8c", "opacity": 0.4, "width": 1 }, 
+            "line_linked": { "enable": true, "distance": 150, "color": "#a0a0a0", "opacity": 0.4, "width": 1 }, /* 🌟 New Default Line Color (Dark Mode) */
             "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } }
         },
         "interactivity": {
@@ -44,7 +44,8 @@ window.applyTheme = function(themeName) {
     const chatContainer = document.querySelector(".chat-container");
     if (!chatContainer) return;
 
-    chatContainer.classList.remove("theme-dark", "theme-blue", "theme-green"); 
+    // Removed "theme-dark" as it's now the base/default theme. Added new themes.
+    chatContainer.classList.remove("theme-blue", "theme-green", "theme-red", "theme-yellow"); 
     
     if (themeName !== 'default') {
         chatContainer.classList.add('theme-' + themeName); 
@@ -82,6 +83,7 @@ function loadTheme() {
             selector.value = savedTheme;
         }
     } else {
+        // "default" is now Dark Mode
         applyTheme('default'); 
         if (selector) {
             selector.value = 'default';
@@ -204,10 +206,11 @@ function createChatGPTpopup() {
         <div class="theme-selector-group">
             <label for="theme-selector">Current Theme:</label>
             <select id="theme-selector" onchange="applyTheme(this.value)">
-                <option value="default">Default (Brown/Original)</option>
-                <option value="dark">Dark Mode</option>
+                <option value="default">Default (Dark Mode)</option>
                 <option value="blue">Deep Blue</option>
                 <option value="green">Forest Green</option>
+                <option value="red">Crimson Red</option>
+                <option value="yellow">Vibrant Yellow</option>
             </select>
         </div>
         <button id="saveThemeButton">Apply & Save Theme</button>
